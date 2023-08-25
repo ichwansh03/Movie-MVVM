@@ -16,7 +16,7 @@ android {
         versionName "1.0"
         buildConfigField("String","BASE_URL",'"https://api.themoviedb.org/3/"')
         buildConfigField("String","PHOTO_BASE_URL",'"https://image.tmdb.org/t/p/w500/"')
-        buildConfigField("String","API_KEY",'"replace with your api key"')
+        buildConfigField("String","API_KEY",'"d7c7987ce4142eb6f6d3824587a35627"')
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
