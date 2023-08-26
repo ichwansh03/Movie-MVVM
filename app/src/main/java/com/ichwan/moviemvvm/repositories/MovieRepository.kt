@@ -9,4 +9,8 @@ class MovieRepository {
     private val client = ApiConfig.getApiService()
 
     suspend fun getPopularMovie(page: Int) = client.getPopularMovie(BuildConfig.API_KEY, page)
+
+    suspend fun getSearchMovie(query: String, page: Int) = client.getSearchMovie(BuildConfig.API_KEY, query, page)
+
+    suspend fun getGenres() = client.getGenres(BuildConfig.API_KEY)
 }
