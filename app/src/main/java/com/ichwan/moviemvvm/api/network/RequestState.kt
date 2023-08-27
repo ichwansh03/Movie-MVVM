@@ -1,7 +1,7 @@
-package com.ichwan.moviemvvm.api
+package com.ichwan.moviemvvm.api.network
 
 /**
- * nge-hit state network ketika call API
+ * provides network state when call API
  */
 sealed class RequestState<out R> private constructor() {
     data class Success<out T>(val data: T) : RequestState<T>()
