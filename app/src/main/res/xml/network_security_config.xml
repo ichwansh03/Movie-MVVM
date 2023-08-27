@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--The Network Security Configuration feature lets you customize your app's
+network security settings in a safe, declarative configuration file without modifying app code.
+These settings can be configured for specific domains and for a specific app.
+docs: https://developer.android.com/training/articles/security-config (set into manifest)-->
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">api.themoviedb.org</domain>
