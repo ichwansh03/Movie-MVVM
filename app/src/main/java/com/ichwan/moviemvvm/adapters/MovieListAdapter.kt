@@ -9,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.ichwan.moviemvvm.BuildConfig
 import com.ichwan.moviemvvm.databinding.MovieListBinding
 import com.ichwan.moviemvvm.listener.OnMovieClickListener
-import com.ichwan.moviemvvm.models.Genres
-import com.ichwan.moviemvvm.models.Movies
+import com.ichwan.moviemvvm.models.entity.Genres
+import com.ichwan.moviemvvm.models.entity.Movies
 
 class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.ViewHolder>() {
 
@@ -26,6 +26,10 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.ViewHolder>() {
         this.genreList.addAll(list)
     }
 
+    /**
+     * optimize view updates by detecting update process at data
+     * and compare old item and new item on movie list
+     */
     private val differCallback = object : DiffUtil.ItemCallback<Movies>() {
         override fun areItemsTheSame(oldItem: Movies, newItem: Movies): Boolean = oldItem == newItem
 
@@ -33,6 +37,9 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.ViewHolder>() {
 
     }
 
+    /**
+     * manage different between data before and during updates
+     */
     val differ = AsyncListDiffer(this, differCallback)
 
     inner class ViewHolder(val binding: MovieListBinding): RecyclerView.ViewHolder(binding.root)
@@ -57,6 +64,10 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.ViewHolder>() {
 
                     Glide.with(itemView).load("${BuildConfig.PHOTO_BASE_URL}$posterPath").into(poster)
 
+                    /**
+                     * because data id and name in genre object is map,
+                     * separate between id and name, and return name value
+                     */
                     val map = genreList.associate { it.id to it.name }
                     val genres = StringBuilder()
 

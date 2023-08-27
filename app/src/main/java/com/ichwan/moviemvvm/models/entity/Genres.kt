@@ -1,4 +1,4 @@
-package com.ichwan.moviemvvm.models
+package com.ichwan.moviemvvm.models.entity
 
 import com.google.gson.annotations.SerializedName
 

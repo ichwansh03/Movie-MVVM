@@ -7,12 +7,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 import com.ichwan.moviemvvm.BuildConfig
 
 /**
- * nge-provide konfigurasi antar API
+ * provides configure inter API's
  */
 class ApiConfig {
 
     companion object {
         fun getApiService(): ApiService {
+            //validate whetever data successufully appear or not in logcat
             val logInceptor = if (BuildConfig.DEBUG) HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
             else HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
 
@@ -20,6 +21,8 @@ class ApiConfig {
                 .addInterceptor(logInceptor)
                 .build()
 
+
+             // fetch a JSON response from web service and return it as a string
             val retrofit = Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())

@@ -1,13 +1,13 @@
 package com.ichwan.moviemvvm.api
 
-import com.ichwan.moviemvvm.models.GenreResponse
-import com.ichwan.moviemvvm.models.MovieResponse
+import com.ichwan.moviemvvm.models.response.GenreResponse
+import com.ichwan.moviemvvm.models.response.MovieResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 /**
- * menyediakan konfigurasi endpoint dari API
+ * providing configuration from API Endpoints
  */
 
 interface ApiService {

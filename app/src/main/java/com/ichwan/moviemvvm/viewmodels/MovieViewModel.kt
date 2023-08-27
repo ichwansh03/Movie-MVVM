@@ -5,9 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
-import com.ichwan.moviemvvm.api.RequestState
-import com.ichwan.moviemvvm.models.GenreResponse
-import com.ichwan.moviemvvm.models.MovieResponse
+import com.ichwan.moviemvvm.api.network.RequestState
+import com.ichwan.moviemvvm.models.response.GenreResponse
+import com.ichwan.moviemvvm.models.response.MovieResponse
 import com.ichwan.moviemvvm.repositories.MovieRepository
 import kotlinx.coroutines.launch
 import org.json.JSONException

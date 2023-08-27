@@ -1,8 +1,9 @@
-package com.ichwan.moviemvvm.models
+package com.ichwan.moviemvvm.models.response
 
 import kotlinx.parcelize.Parcelize
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import com.ichwan.moviemvvm.models.entity.Movies
 
 @Parcelize
 data class MovieResponse(
