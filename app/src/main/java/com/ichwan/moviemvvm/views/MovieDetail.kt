@@ -8,8 +8,7 @@ import android.os.Parcelable
 import com.bumptech.glide.Glide
 import com.ichwan.moviemvvm.BuildConfig
 import com.ichwan.moviemvvm.databinding.ActivityMovieDetailBinding
-import com.ichwan.moviemvvm.models.Genres
-import com.ichwan.moviemvvm.models.Movies
+import com.ichwan.moviemvvm.models.entity.Movies
 
 class MovieDetail : AppCompatActivity() {
 

@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import com.ichwan.moviemvvm.adapters.MovieListAdapter
-import com.ichwan.moviemvvm.api.RequestState
+import com.ichwan.moviemvvm.api.network.RequestState
 import com.ichwan.moviemvvm.databinding.ActivityMovieListBinding
 import com.ichwan.moviemvvm.listener.OnMovieClickListener
-import com.ichwan.moviemvvm.models.Movies
+import com.ichwan.moviemvvm.models.entity.Movies
 import com.ichwan.moviemvvm.viewmodels.MovieViewModel
 
 class MovieList : AppCompatActivity() {
@@ -115,7 +115,4 @@ class MovieList : AppCompatActivity() {
         binding.loading.hide()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-    }
 }
