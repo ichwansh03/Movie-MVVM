@@ -8,10 +8,10 @@ import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ichwan.moviemvvm.adapters.MovieListAdapter
-import com.ichwan.moviemvvm.api.RequestState
+import com.ichwan.moviemvvm.api.network.RequestState
 import com.ichwan.moviemvvm.databinding.ActivitySearchMovieBinding
 import com.ichwan.moviemvvm.listener.OnMovieClickListener
-import com.ichwan.moviemvvm.models.Movies
+import com.ichwan.moviemvvm.models.entity.Movies
 import com.ichwan.moviemvvm.viewmodels.MovieViewModel
 
 class SearchMovie : AppCompatActivity() {
